@@ -24,7 +24,7 @@ for file in files_list:
         output_path = os.path.join(output_dir, filename)
         
         if not os.path.exists(output_path):
-            print(f" - Downloading {file}")
+            print(f" - Downloading {filename}")
             response = data_api.get_datafile(file_id, is_pid=False)
             
             with open(output_path, "wb") as f:
