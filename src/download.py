@@ -38,4 +38,17 @@ for filename in os.listdir(output_dir):
             zip_ref.extractall(output_dir)
         os.remove(zip_path)
 
+duplicates = [
+    "paclitaxel/red/B2AI_3_untreated_C2_R3_z01_red.jpg",
+    "paclitaxel/blue/B2AI_3_untreated_C2_R3_z01_blue.jpg",
+    "paclitaxel/green/B2AI_3_untreated_C2_R3_z01_green.jpg",
+    "paclitaxel/yellow/B2AI_3_untreated_C2_R3_z01_yellow.jpg"
+]
+
+print("Patching data release for duplicates...")
+for file in duplicates:
+    file_path = os.path.join(output_dir, file)
+    if os.path.exists(file_path):
+        os.remove(file_path)
+
 print(f"Complete! IF data extracted to: {output_dir}")
