@@ -4,3 +4,4 @@ pyDataverse
 tqdm
 seaborn
 umap-learn
+tensorflow

@@ -1,11 +1,5 @@
 import os
 
-from cellmaps_imagedownloader.runner import CM4AICopyDownloader
-from cellmaps_imagedownloader.runner import CellmapsImageDownloader
-from cellmaps_imagedownloader.gene import CM4AITableConverter
-from cellmaps_imagedownloader.gene import ImageGeneNodeAttributeGenerator
-from cellmaps_imagedownloader.proteinatlas import CM4AIImageCopyTupleGenerator
-
 from cellmaps_image_embedding.runner import DensenetEmbeddingGenerator
 from cellmaps_image_embedding.runner import CellmapsImageEmbedder
 
@@ -20,25 +14,6 @@ for treatment_folder in os.listdir(input_base_path):
     manifest_path = os.path.join(input_path, "manifest.csv")
     image_interim_path = os.path.join(image_interim_base_path, treatment_folder)
     embedding_path = os.path.join(embedding_base_path, treatment_folder)
-
-    # converter = CM4AITableConverter(cm4ai=manifest_path)
-    # samples_list, unique_list = converter.get_samples_and_unique_lists()
-    # dloader = CM4AICopyDownloader()
-
-    # imagegen = ImageGeneNodeAttributeGenerator(unique_list=unique_list, samples_list=samples_list)
-    # imageurlgen = CM4AIImageCopyTupleGenerator(samples_list=imagegen.get_samples_list())
-    # downloader = CellmapsImageDownloader(
-    #     outdir=image_interim_path,
-    #     existing_outdir=False,
-    #     imagedownloader=dloader,
-    #     imgsuffix="jpg",
-    #     imagegen=imagegen,
-    #     imageurlgen=imageurlgen,
-    #     provenance={
-
-    #     }
-    # )
-    # downloader.run()
 
     gen = DensenetEmbeddingGenerator(
         input_path,
