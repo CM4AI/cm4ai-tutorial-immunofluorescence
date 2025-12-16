@@ -1,7 +1,7 @@
 # Cell Maps for AI (CM4AI) Immunofluorescence (IF) Embedding Tutorial
 
 ## Overview
-This tutorial will work with the IF data that are available in the [CM4AI March 2025 Data Release](https://dataverse.lib.virginia.edu/dataset.xhtml?persistentId=doi:10.18130/V3/B35XWX). This release contains IF images for 4 channels in untreated, [paclitaxel-treated](https://www.cancer.gov/about-cancer/treatment/drugs/paclitaxel), and [vorinostat-treated](https://www.cancer.gov/about-cancer/treatment/drugs/vorinostat) [MDA-MB-468 breast cancer cells](https://www.cellosaurus.org/CVCL_0419).
+This tutorial will work with the IF data that are available in the [CM4AI October 2025 Data Release](https://dataverse.lib.virginia.edu/dataset.xhtml?persistentId=doi:10.18130/V3/K7TGEM). This release contains IF images for 4 channels in untreated, [paclitaxel-treated](https://www.cancer.gov/about-cancer/treatment/drugs/paclitaxel), and [vorinostat-treated](https://www.cancer.gov/about-cancer/treatment/drugs/vorinostat) [MDA-MB-468 breast cancer cells](https://www.cellosaurus.org/CVCL_0419).
 
 With the Python notebooks and scripts in the src directory, you will be able to:
 1. Download and extract the raw IF data from Dataverse
