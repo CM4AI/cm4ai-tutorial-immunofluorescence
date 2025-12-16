@@ -2,7 +2,7 @@ from pyDataverse.api import NativeApi, DataAccessApi
 import zipfile
 import os
 
-cm4ai_beta_doi = "doi:10.18130/V3/B35XWX"
+cm4ai_doi = "doi:10.18130/V3/K7TGEM"
 base_url = 'https://dataverse.lib.virginia.edu/'
 output_dir = "data/raw"
 
@@ -12,13 +12,13 @@ api = NativeApi(base_url)
 data_api = DataAccessApi(base_url)
 
 print("Downloading data set (this may take a while)...")
-cm4ai_beta_dataset = api.get_dataset(cm4ai_beta_doi)
+cm4ai_beta_dataset = api.get_dataset(cm4ai_doi)
 
 files_list = cm4ai_beta_dataset.json()['data']['latestVersion']['files']
-if_label = "Protein Localization Subcellular Images"
+if_label = "Images"
 
 for file in files_list:
-    if file["directoryLabel"] == if_label:
+    if "directoryLabel" in file and file["directoryLabel"] == if_label:
         file_id = file["dataFile"]["id"]
         filename = file["dataFile"]["filename"]
         output_path = os.path.join(output_dir, filename)
