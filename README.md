@@ -24,7 +24,7 @@ conda env create -f environment.yml
 ```
 2. Activate the environment
 ```
-conda activate cm4ai-if-tutorial
+conda activate cm4ai-tutorial-if
 ```
 3. Review and run the tutorial scripts
    1. Download the CM4AI data release: [View Script](src/download.py)

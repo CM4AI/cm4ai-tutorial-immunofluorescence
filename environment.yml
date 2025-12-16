@@ -1,4 +1,4 @@
-name: cm4ai-if-tutorial
+name: cm4ai-tutorial-if
 channels:
   - defaults
 dependencies:
